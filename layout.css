@@ -1,0 +1,35 @@
+body, html{
+    background-color: rgb(180, 180, 180);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container{
+    width: 80%;
+    background-color: rgb(226, 241, 255);
+    margin: 0 auto; /*coloca a div no centro*/
+    height: 100%;
+    display: grid; /*para editar cada parte do layout*/
+    grid-template-columns:80% 20%; /*determinamos a quantidade de colunas e o tamanho delas*/
+    grid-template-rows:250px auto 100px; /*determinamos a quantidade de linhas e o tamanho deles*/
+    grid-template-areas:'header header'
+                        'main sidebar'
+                        'footer footer'; /*Descrevemos exatamente como vai ser a divisão*/
+}
+header{
+    background-color: #a4a4cc;
+    grid-area: header; /*Chamamos pelo nome que colocamos no grid-template-area*/
+}
+main{
+    background-color: #00ab00;
+    grid-area: main;
+}
+aside{
+    background-color: #acdd;
+    grid-area: sidebar;
+}
+footer{
+    background-color: #004222;
+    grid-area: footer;
+}
