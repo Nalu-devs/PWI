@@ -1,0 +1,21 @@
+body,html{
+    background-color: #e7ecef;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4{
+    background-color: #a3cef1;
+    border: 2px solid;
+}
+.p{
+    background-color: #a3cef1;
+    color: #000;
+}
+.center{
+    background-color: #274c77;
+    color:#ffff;
+    display: grid;
+    place-items: center;
+    height: 60px;
+    width: 100%;
+    margin-top: 0;
+}

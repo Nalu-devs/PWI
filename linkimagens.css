@@ -1,0 +1,23 @@
+body{
+    background-color: #e7ecef;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.titulo{
+    background-color: #274c77;
+    color: #ffffff;
+    display: grid;
+    place-items: center;
+    height: 60px;
+    width: 100%;
+}
+img:hover{/*Quando o mouse passar por cima vai acontecer oq estiver dentro dela*/
+    border: 5px solid #b67fff;/*Define uma borda de 5 pixel solida rosinha*/
+    border-radius: 50%; /*Faz a imagem ficar com os cantos arredondados*/
+    width: 320px;/*Faz a imagem aumentar para 320 pixel de largura*/
+    height:360px;/*Faz a imagem aumentar para 360 pixel de altura*/
+    transition-duration: 0.9s;
+}
+
+img{
+    border:5px solid #bbbbd8 /*Define uma borda de 5 pixel solida de cor azul*/
+}

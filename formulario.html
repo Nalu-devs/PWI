@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario e botão</title>
+    <link href="formulariobotao.css" rel="stylesheet">
+</head>
+<body>
+    <div class="titulo"><h1>Formularios e botões</h1></div>
+    <p><strong>Tags básicas do formulario: Form, Action e method</strong></p>
+    <p><strong>Tag Form:</strong> É o elemento fundamental que envolve todos os outros elementos relacionados ao formulário. Ela define a área onde os usuários podem inserir dados e como esses dados serão enviados para o servidor.</p>
+    <p><strong>Tag Action:</strong> Especifica a URL (endereço) para onde os dados do formulário serão enviados quando o usuário o submeter. </p>
+    <p><strong>Tag Method:</strong> Define o método HTTP usado para enviar os dados do formulário para o servidor.</p>
+    <p><strong>Os dois mais usados:</strong> Get e POST</p>
+    <p><strong>Tag Name:</strong> Define um nome para tabela, útil caso queira usar os dados dentro de PHP ou Javascrip</p>
+    <p><strong>Tag input:</strong> Abre uma aba para o usuario poder digitar, onde pode ter diversos tipos de dados</p>
+    <p><strong>Tag type:</strong> Serve para declarar o tipo de dado que será digitado nele</p>
+    <hr>
+    <p><strong>Type text:</strong> Declara tipo texto</p>
+    <input type="text" value="Digite o texto">
+    <hr>
+    <p><strong>Type password:</strong> Declara tipo senha </p>
+    <input type="password">
+    <hr>
+    <p><strong>Type radio:</strong> Declara tipo escolha única</p>
+    <input type="radio" name="teste"> Um <input type="radio" name="teste">Dois 
+    <hr>
+    <p><strong>Type checkbox:</strong> Declara tipo multiplas escolha</p>
+    <input type="checkbox" name="teste"> Um <input type="checkbox" name="teste">Dois
+    <hr>
+    <p><strong>Type submit:</strong> Declara tipo submeter resposta para outro lugar</p>
+    <input type="submit">
+    <hr>
+    <p><strong>Type number:</strong> Declara tipo numero</p>
+    <input type="number" value="Escolha um numero">
+    <hr>
+    <p><strong>Type email:</strong> Declara tipo e-mail</p>
+    <input type="email" value="Digite seu email">
+    <hr>
+    <p><strong>Type date:</strong> Declara tipo data</p>
+    <input type="date" value="escolha uma data">
+    <hr>
+    <p><strong>Type reset:</strong> Declara tipo resetar</p>
+    <input type="reset" value="Resetar">
+    <hr>
+    <p><strong>Tags básicas do botão: type e name</strong></p>
+    <p><strong>Type button onclick:</strong> Ao ser clicado exibe uma mensagem na tela</p>
+    <input type="button" value="Clique e veja uma mensagem" onclick="alert('Parabens você é burro!!')">
+    <p><strong>Exemplo de formulario:</strong></p>
+    <form method="post" accept="teste">
+        <input
+        type="text"
+        name="formulario">
+        <input type="submit" value="submeter resposta">
+    </form>
+</body>
+</html>

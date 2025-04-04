@@ -1,0 +1,44 @@
+body, html{
+    background-color: rgb(220, 220, 220);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 80%;
+    background-color: #8b8c89;
+    margin: 0 auto; /*coloca a div no centro*/
+    height: 100%;
+    display: grid; /*para editar cada parte do layout*/
+    grid-template-columns:80% 20%; /*determinamos a quantidade de colunas e o tamanho delas*/
+    grid-template-rows:80px auto 50px; /*determinamos a quantidade de linhas e o tamanho deles*/
+    grid-template-areas:'header header'
+                        'main sidebar'
+                        'footer footer'; /*Descrevemos exatamente como vai ser a divisão*/
+}
+header{
+    background-color: #274c77;
+    color:#ffffff;
+    grid-area: header; /*Chamamos pelo nome que colocamos no grid-template-area*/
+    display:grid;
+    place-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+main{
+    background-color: #e7ecef;
+    grid-area: main;
+    line-height: 30px;/*separa as linhas no tamanho escolhido*/
+    display: grid; /*atribui o display grid*/
+    place-items: center;/*alinha os itens no meio da pagina*/
+}
+aside{
+    background-color: #a3cef1;
+    grid-area: sidebar;
+}
+footer{
+    background-color:#274c77;
+    color:#ffff;
+    grid-area: footer;
+}
