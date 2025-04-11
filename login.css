@@ -18,8 +18,13 @@ body{
     height: 70%;
     padding: 2%;
     position: fixed;
-    border-radius: 30px;
 }
+
+.card:hover{
+    border-radius: 30px;
+    transition: 0.7s;
+}
+
 h1{
     color: #0d1117;
     font-size: 35px;
@@ -50,10 +55,21 @@ h1{
 }
 #sub{
     position: absolute;
-    width: 100px;
+    height: 25px;
+    width: 120px;
     right: 0;
     margin-right: 40px ;
+    border-radius: 7px;
+    background-image: linear-gradient(to right, #000000, #013a69);
+    color: white;
 }
 #sub:hover{
     transition: 0.3s;
+    font-size: 17px;
+    height: 35px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.568);
+    cursor: pointer;
+    text-decoration: underline;
 }
+
+
