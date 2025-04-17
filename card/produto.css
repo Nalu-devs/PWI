@@ -1,0 +1,38 @@
+.info-produto{
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+}
+.img-produto{
+    width:50%;
+    display: flex;
+    align-items: center;
+
+}
+.informacao-produto{ 
+    width: 50%;
+    text-align: center;
+}
+.nome-produto{
+    width: 100%;
+    font-size: 32px;
+    margin-bottom: 50px;
+    line-height: 40px;
+    margin-top: 0;
+}
+.valor-produto{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-bottom: 300px;
+}
+.add-carrinho{
+    width: 50%;
+    align-items: center;
+    margin: 0 auto;
+}
+.descricao{
+    display: block;
+}
+section{
+
+}
