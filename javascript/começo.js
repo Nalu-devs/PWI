@@ -1,0 +1,55 @@
+var x = 35 
+//Declaração de variavel do tipo inteiro
+document.write(x+"<br>")
+var y = 0.32 
+//Declaração de variavel do tipo real
+document.write(y+"<br>")
+var aparece 
+//Declara variavel indeclaravel, pois n tem nada armazenado nela (underfined)
+document.write(aparece+"<br>")
+var apareceV="" 
+//Não aparece nada mais tem algo declarado na variavel, porem é um valor nulo
+document.write(apareceV+"<br>")
+var texto="Eu sou uma string" 
+var texto1='Eu também sou uma string'
+//Nos dois exemplos acima são declarados variaveis do tipo string (sequencia de caracter)
+document.write(texto+"<br>"+ texto1+"<br>")
+var matriz = new Array(4)
+//Criamos um Array de 4 possições
+var matriz = [1,2,3,4]
+//Declaramos o valor que será guardado no array
+matriz[0]='Adeus'
+matriz[1]=1
+//Acessamos e atribuimos valores ao array de posição 0 que antes era 1 e 1 que antes era 2
+document.write(matriz+"<br>")
+//Operadores de javascript
+// == Igual a 
+// != Diferente de
+// === Igual e do mesmo tipo que 
+// !== Não identico a
+// & equivale a E 
+// | equivale a OU
+// && equivale a E Logico
+// || equivale a OU Logico
+// X += Y mesmo que X = X + Y
+// X -= Y mesmo que X = X - Y
+// X *= Y mesmo que X = X * Y
+// X /= Y mesmo que X = X / Y
+var a = 12
+var b = 20
+if (a==b){
+    document.write("Quando que 12 é igual a 20 oxi")
+}
+else{
+    document.write(a+" é diferente de "+b+"<br>")
+}
+var c = 10
+if (c<10){
+    document.write(c+" É menor que 10")
+}
+else if (c>10){
+    document.write(c+" É maior que 10")
+}
+else{
+    document.write(c+" Não é maior nem menor que 10 então é 10")
+}
