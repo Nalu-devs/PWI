@@ -1,0 +1,30 @@
+<script>
+    function MostrarAlerta(texto)/*A base é function nome da função e ()*/
+    {
+        alert(texto)/*Quando colocamos algo nos () de cima serve para passar um parametro*/
+    }
+
+    function somar(numero1,numero2)
+    {
+        var soma = Number (numero1) + Number(numero2)
+        return soma /*Retorna o resultado da soma do numero1 e numero2*/
+    }
+    
+    function clique()
+    {
+        MostrarAlerta(somar (prompt("Digite um numero"), prompt("Digite outro numero")))
+    }
+
+    //MostrarAlerta("Hello Word")
+    //MostrarAlerta(prompt("Digite algo"))
+
+/*function MostrarAlerta()
+{
+    alert('Oi')
+}
+MostrarAlerta() 
+
+aparece a mensagem Oi*/
+</script>
+
+<button onclick="clique()">Somar</button>
