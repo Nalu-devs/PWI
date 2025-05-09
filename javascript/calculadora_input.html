@@ -1,0 +1,33 @@
+<input placeholder="Digite 1º numero" type="text" name="num1" id="numero1"/>
+<br>
+<input placeholder="Digite 2º numero" type="text" name="num2" id="numero2"/>
+<br><br>
+<button id="botao" onclick="somar()">+</button>
+<button id="botao" onclick="sub()">-</button>
+<button id="botao" onclick="mult()">X</button>
+<button id="botao" onclick="div()">/</button>
+
+<script>
+    function somar()
+    {
+        var numero1 = document.getElementById("numero1") //Transforma o id numero1 na variavel numero1
+        var numero2 = document.getElementById("numero2") //Transforma o id numero2 na variavel numero2
+        alert(Number (numero1.value) + Number (numero2.value))
+    }
+    function sub()
+    {
+        var numero1 = document.getElementById("numero1")
+        var numero2 = document.getElementById("numero2")
+        alert(Number (numero1.value) - Number (numero2.value))
+    }function mult()
+    {
+        var numero1 = document.getElementById("numero1")
+        var numero2 = document.getElementById("numero2")
+        alert(Number (numero1.value) * Number (numero2.value))
+    }function div()
+    {
+        var numero1 = document.getElementById("numero1")
+        var numero2 = document.getElementById("numero2")
+        alert(Number (numero1.value) / Number (numero2.value))
+    }
+</script>
