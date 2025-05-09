@@ -1,7 +1,0 @@
-var num1=parseFloat(prompt("Digite um numero"))
-var num2=parseFloat(prompt("Digite outro numero"))
-var soma="soma igual" + num1+num2
-var sub="subtração igual" + num1-num2
-var mult="multiplicação igual" + num1*num2
-var div="divisão igual" + num1/num2
-alert(soma + sub + mult + div)

@@ -1,6 +1,0 @@
-var num=parseFloat(prompt("Digite um número e daremos a tabuada dele"))
-for(i=0; i<=10; i++)
-{
-    var res=num*i
-    document.write(num +" "+"X"+" "+ i +" "+"="+" "+ res +" "+ " " +"<br><br>")
-}
