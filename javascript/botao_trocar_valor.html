@@ -11,13 +11,15 @@ id="entrada"/>
     function trocarTexto()
     {
         var entrada = document.getElementById("entrada") 
-        entrada.value = "Ana Lúcia"
+        
         var botao = document.getElementById("botao")
         if(botao.style.backgroundColor == "red") {
             botao.style.backgroundColor = "blue"
+            entrada.value = "Ana"
         }
         else{
             botao.style.backgroundColor = "red"
+            entrada.value = "Lúcia"
         }
     }
     
