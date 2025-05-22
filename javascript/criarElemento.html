@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de elementos</title>
+</head>
+<body>
+    <h1>Crianção de elementos</h1>
+
+    <label for="tag">Escolha uma Tag:</label>
+    <input type="text" 
+            id="tag" 
+            name="tag"
+            >
+
+
+    <label for="cor">Escolha uma cor:</label>
+    <input type="color" 
+            id="cor" 
+            name="cor"
+            value="#ff0000">
+
+    <input id="texto" type="text" name="texto" />
+    <div id="caixa"></div>
+    <button onclick="criarElemento()">
+        Gerar Elemento
+    </button>
+    <script>
+        function criarElemento()
+        {
+            for(var i = 0; i < 10; i++)
+            {
+                var cor = document.getElementById('cor')
+                var tag = document.getElementById('tag')
+                var digitado = document.getElementById('texto')
+                var novoH1 = document.createElement(tag.value)
+                novoH1.style.backgroundColor = cor.value
+                novoH1.style.color = '#FFFFFF'
+                novoH1.id = "titulo"
+                novoH1.classList.add("primeiroTitulo")
+                novoH1.innerText = digitado.value+" - "+i
+                
+                var div = document.getElementById('caixa')
+                div.append(novoH1)
+            }
+           
+        }
+    </script>
+
+</body>
+</html>
+<!--
+const novoParagrafo = document.createElement("p");
+
+  // 2. Adicionar conteúdo ao elemento
+  novoParagrafo.textContent = "Este parágrafo foi criado com JavaScript!";
+
+  // 3. Adicionar o elemento ao DOM
+  const container = document.getElementById("container");
+  container.appendChild(novoParagrafo);
+
+  -->

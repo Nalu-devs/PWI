@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor</title>
+</head>
+
+<body>
+    <input id="texto" name="texto" type="text" />
+    <button onclick="adicionarImagem()">Adicionar</button>
+    <ul id="listaImagens">
+    </ul>
+    <script>
+        function adicionarImagem() {
+            var lista = document.getElementById('listaImagens')
+            var texto = document.getElementById('texto')
+            var item = document.createElement("li")
+            var img = document.createElement('img')
+            img.src = texto.value
+            img.width = 150
+            img.height = 75
+            item.append(img)
+            lista.append(item)
+        }
+
+        var nomes = [
+            "Nix", 
+            "Nalu", 
+            "Heitor",
+            "Fernando",
+            "Rafael",
+            "Julio",
+            "Gabriela",
+            "João",
+            "Maria Clara",
+            "Junior",
+            "Mariana",
+            "Mario",
+            "Matheus"
+        ]
+        //alert(nomes[numeroAleatorio(nomes.length)]//length define a quantidade de itens da lista)
+        for(var i=0; i< nomes.length; i++)//Acessa todos os indices do vetor
+        {
+            document.write("<br>"+ nomes[i])//mostra todos os nomes do vetor
+        }
+        function numeroAleatorio(numeroMaximo) {
+            return Math.floor(Math.random() * numeroMaximo)// o math floor corta casa decimal, o math random sorteia um numero de 0 a 1
+            //cria a função numeroAleatorio e coloca como parametro para o numeroMaximo que pe definido em nomes[numeroAleatorio()]
+        }
+    </script>
+</body>
+
+</html>
