@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7 de vetor</title>
+</head>
+
+<body>
+    <script>
+        var cores = [
+            "1 ",
+            " 2 ",
+            " 3"
+        ]
+
+        exibirCores(cores)
+        cores.push(" 4")
+        cores.unshift("0")
+        cores.reverse()
+        exibirCores(cores)
+        
+        function exibirCores(cor){
+            document.write("<hr>")
+            cores.forEach(
+                (core) => {
+                    document.write("<br> Cores: " + core + "<br>")
+                }
+            )
+        }
+    </script>
+</body>
+
+</html>

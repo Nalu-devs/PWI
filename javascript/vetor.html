@@ -26,8 +26,8 @@
         }
 
         var nomes = [
-            "Nix", 
-            "Nalu", 
+            "Nix",
+            "Nalu",
             "Heitor",
             "Fernando",
             "Rafael",
@@ -41,14 +41,39 @@
             "Matheus"
         ]
         //alert(nomes[numeroAleatorio(nomes.length)]//length define a quantidade de itens da lista)
-        for(var i=0; i< nomes.length; i++)//Acessa todos os indices do vetor
-        {
-            document.write("<br>"+ nomes[i])//mostra todos os nomes do vetor
-        }
+        // for (var i = 0; i < nomes.length; i++)//Acessa todos os indices do vetor
+        // {
+        //     document.write("<br>" + nomes[i])//mostra todos os nomes do vetor
+        // }
         function numeroAleatorio(numeroMaximo) {
             return Math.floor(Math.random() * numeroMaximo)// o math floor corta casa decimal, o math random sorteia um numero de 0 a 1
             //cria a função numeroAleatorio e coloca como parametro para o numeroMaximo que pe definido em nomes[numeroAleatorio()]
         }
+     
+        ExibirLista(nomes)
+        nomes.reverse()//reverte a ordem da lista
+        ExibirLista(nomes)
+        nomes.unshift("Novo nome do inicio da lista")//Adiciona um item no inicio da lista
+        ExibirLista(nomes)
+        nomes.shift()//Deleta o primeiro item da lista
+        ExibirLista(nomes)
+        nomes.push("Joaquim do final da lista")//adiciona um item no fim da lista
+        ExibirLista(nomes)
+        nomes.pop()//remove um item no fim da lista
+        ExibirLista(nomes)
+        
+        function ExibirLista(lista) 
+        {
+            document.write("<hr>")
+            lista.forEach(
+                (valor, indice) => {
+                    document.write("<br> Indice: " + indice + " Valor: " + valor + "<br>")
+                }
+            )
+        }
+
+        //foreach só funciona em lista
+        //novo modelo de função: ()=>{} 
     </script>
 </body>
 
