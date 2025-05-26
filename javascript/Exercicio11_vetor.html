@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11 de vetor</title>
+</head>
+<body>
+    <script>
+        var numeros = []
+        for(var i=1; i<=75;i++){
+            numeros.push(i)//vai adicionar os numeros de 1 a 75
+        }
+        
+        exibirNumeros(numeros)
+        for(var i=1; i<=25;i++){
+            numeros.shift(i)//vai remover os numeros começando em 1 e terminando em 25
+        }
+
+        exibirNumeros(numeros)
+        function exibirNumeros(numero){
+            document.write("<hr>")
+            for(var i=0; i<numero.length;i++){
+                document.write("Indice "+i+" tem valor: "+numero[i]+"<br>")
+            }
+        }
+    </script>
+</body>
+</html>
