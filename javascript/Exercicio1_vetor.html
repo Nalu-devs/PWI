@@ -19,11 +19,10 @@
         exibirCores(cores)
 
         function exibirCores(cor) {
-            cores.forEach(
-                (core) => {
-                    document.write("<br> Cor: " + core + "<br>")
+            for(var i=0; i<cor.length;i++){
+                    document.write("<br> Cor: " + cor[i] + "<br>")
                 }
-            )
+            
         }
     </script>
 </body>

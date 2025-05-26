@@ -16,7 +16,7 @@
             " Marrom"
         ]
 
-        exibirCores(cores)
+        document.write(cores)
         cores.push(" Amarelo")
         exibirCores(cores)
         cores.pop()
@@ -30,11 +30,9 @@
         
         function exibirCores(cor){
             document.write("<hr>")
-            cores.forEach(
-                (core) => {
-                    document.write("<br> Cores: " + core + "<br>")
+           for(var i=0;i<cor.length;i++){
+                    document.write("<br> Cores: " + cor[i] + "<br>")
                 }
-            )
         }
     </script>
 </body>

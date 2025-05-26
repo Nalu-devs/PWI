@@ -10,25 +10,23 @@
 
 <body>
     <script>
-        var cores = [
+        var numeros= [
             "1 ",
             " 2 ",
             " 3"
         ]
 
-        exibirCores(cores)
-        cores.push(" 4")
-        cores.unshift("0")
-        cores.reverse()
-        exibirCores(cores)
+        document.write(numeros)
+        numeros.push(" 4")
+        numeros.unshift("0")
+        numeros.reverse()
+        exibirNumeros(numeros)
         
-        function exibirCores(cor){
+        function exibirNumeros(num){
             document.write("<hr>")
-            cores.forEach(
-                (core) => {
-                    document.write("<br> Cores: " + core + "<br>")
-                }
-            )
+            for(var i=0; i<num.length;i++){
+                document.write("<br> Numeros: " + num[i] + "<br>")
+            }
         }
     </script>
 </body>
