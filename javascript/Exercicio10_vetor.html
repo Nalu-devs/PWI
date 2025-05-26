@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10 de vetor</title>
+</head>
+
+<body>
+
+    <script>
+        var listas = []
+
+        listas.unshift("1")
+        listas.push("2")
+        listas.push("3")
+        listas.push("4")
+        listas.push("5")
+        listas.reverse()
+        exibirLista(listas)
+
+        function exibirLista(lista){
+            for(var i=0;i<lista.length;i++){
+                document.write("Contagem: "+lista[i]+"<br>")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
