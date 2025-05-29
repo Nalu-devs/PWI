@@ -13,6 +13,9 @@
         <!--O onsubmit declara que quando uma tag form sofrer um submit executa a função indicada nesse caso validarFormulario o return volta pra pagina do formulario-->
         <label>Cep</label>
         <input onkeydown="validarTexto()" type="text" name="cep" id="cep" class="campo" maxlength="8"><!--onkeydown é pra quando apertar qualquer tecla para baixo-->
+        <button onclick="Clicar()" type="button" id="teste">
+            Consultar CEP
+        </button>
         <br><br>
         <label>Endereço</label>
         <input type="text" name="endereco" id="endereco" class="campo" />
@@ -34,6 +37,29 @@
         </button>
     </form>
     <script>
+
+        function Clicar(){
+            var input = document.getElementById("cep")
+
+            var url = "https://viacep.com.br/ws/" + input.value + "/json/"
+            fetch(url)
+                .then(response => response.json())
+                .then(dados => {
+                    var cep = document.getElementById('cep')
+                    var endereco = document.getElementById('endereco')
+                    var numero = document.getElementById('numero')
+                    var bairro = document.getElementById('bairro')
+                    var cidade = document.getElementById('cidade')
+                    var estado = document.getElementById('estado')
+                    endereco.value = dados.logradouro
+                    bairro.value = dados.bairro
+                    cidade.value = dados.localidade
+                    estado.value = dados.estado
+                }
+                )
+                .catch(error => console.error('Erro:', error));
+        }
+
         function validarFormulario() {
             var cep = document.getElementById("cep")
             var endereco = document.getElementById("endereco")
