@@ -12,6 +12,10 @@
 <body>
 
     <main>
+        <div class="conteudo">
+        <div class="misty">
+            <img src="imagens/misty.webp" alt="Misty pokemon">
+        </div>
         <div class="pokedex">
 
             <input id="pokemon" placeholder="Digite o número do Pokémon">
@@ -19,30 +23,30 @@
             <input type="text" id="nome" class="nome"><br>
             <img id="img">
         </div>
-
+        <div class="ash">
+            <img src="imagens/ash.webp" alt="Ash pokemon">
+        </div>
+        </div>
     </main>
 
 
     <script>
-        const input = document.getElementById("pokemon");
+        const pokemon = document.getElementById("pokemon");
         const numero = document.getElementById("numero");
         const nome = document.getElementById("nome");
         const img = document.getElementById("img");
 
         function gerarPokemon() {
-            const url = "https://pokeapi.co/api/v2/pokemon/" + input.value
+            const url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.value
             fetch(url)
                 .then(response => response.json())
                 .then((dados) => {
 
                     nome.value = dados.name
-                    img.src = dados.sprites.front_default
+                    img.src = dados.sprites.other.showdown.front_default
                     img.style.height = "200px"
                     img.style.width = "200px"
                 })
-
-
-            console.log("funcionou")
         }
 
 
