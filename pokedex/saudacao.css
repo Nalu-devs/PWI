@@ -42,20 +42,25 @@ img {
 .caixaTexto {
     background-color: #fff;
     max-width: 100%;
-    width: 90%;
-    height: 80px;
+    width: 80%;
+    height: 130px;
     margin-top: 10px;
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 30px;
+    padding: 5px;
     font-size: 20px;
-    display: flex;
-    
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid #97b7c4;
 }
 
-.continuar {
-    display: flex;
-    height: 20px;
+button{
+    font-size: 17px;
+    border-radius: 20px;
+    border: 1px solid;
+    max-width: 100%;
+    width: 40%;
+    height: 30px;
 }
 
 a {
