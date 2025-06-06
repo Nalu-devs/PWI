@@ -25,16 +25,40 @@ img {
     width: 30%;
     max-width: 100%;
     height: auto;
-    /* Garante que a imagem fique acima da sombra */
-    z-index:2;
 }
 
-.circulo{
-    width: 400px;
-    height: 50px;
-    background-color: #97b7c4;
+.circulo {
+    display: block;
+    max-width: 100%;
+    width: 40%;
+    height: auto;
     border: 5px solid #497777;
-    border-radius: 50%; /* ISSO A TORNA REDONDA/ELÍPTICA! */
-    filter: blur(5px); /* Opcional: Adiciona um desfoque extra à sombra */
-    z-index: 1; /* Garante que a sombra fique abaixo da imagem */
+    border-radius: 50%;
+    /* ISSO A TORNA REDONDA/ELÍPTICA! */
+    filter: blur(5px);
+    /* Opcional: Adiciona um desfoque extra à sombra */
+}
+
+.caixaTexto {
+    background-color: #fff;
+    max-width: 100%;
+    width: 90%;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    
+
+}
+
+.continuar {
+    display: flex;
+    height: 20px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
