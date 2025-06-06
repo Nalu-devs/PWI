@@ -6,36 +6,117 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+}
+.carcaca {
+    margin-right: 3%;
+    border: 1px solid red;
+    width: 55%;
+    height: 90vh;
+    max-width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #f93333;
+    position: relative;
 }
 
-.pokedex {
+.lente{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0075cf;
+    margin-left: 8%;
+    border: 5px solid  black;
+    position: absolute;
+
+}
+
+.lente2{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #0075cf;
+    margin-left: 8%;
+    border: 5px solid  black;
+    position: absolute;
+
+}
+
+.botoes {
+    border: 3px solid;
+    background-color: #665c5a;
+    height: 20%;
     margin: 0 auto;
-    border: 1px solid red;
-    width: 35%;
-    height: 70vh;
-    max-width: 100%;
+    width: 94%;
+    margin-top: 5%;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tela {
+    background-color: #fff;
+    height: 50%;
+    padding: 30px;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 3%;
+    border: 2px solid #1b2e29;
+    box-shadow: inset 4px 0 3px #665c5a, inset -4px 0 3px #665c5a, inset 0 -4px 4px #665c5a;
+
+}
+
+#pokemon {
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 98%;
+    border-radius: 20px;
+    height: 25px;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 13px;
+    background-color: #8ec443;
+    border: 2px solid;
+}
+
+#pokemon::placeholder {
+    /*:: indica uma pseudoclasse*/
+    color: #161a1d;
+    padding-left:5%;
+}
+
+button{
+    margin: 0 auto;
+    margin-left: 30%;
+    height: 60%;
+    width: 40%;
+    background-color: #8ec443;
+    font-family: "Press Start 2P", system-ui;
+    font-size: 13px;
 }
 
 .nome {
-    border: none;
+    border: 1px solid;
 }
 
-.misty img{
-    width: 20%;
+.misty img {
+    margin-left: 40%;
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid;
+}
+
+.ash img {
+    border: 1px solid;
+    width: 90%;
     max-width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
-.ash img{
-    width: 30%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
 
-
-.conteudo{
+.conteudo {
     display: flex;
     height: 100%;
     border: 1px solid red;

@@ -7,42 +7,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Pokedex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <main>
         <div class="conteudo">
-        <div class="misty">
-            <img src="imagens/misty.webp" alt="Misty pokemon">
-        </div>
-        <div class="pokedex">
-
-            <input id="pokemon" placeholder="Digite o número do Pokémon">
-            <button id="numero"> Buscar Pokemon </button> <br>
-            <input type="text" id="nome" class="nome"><br>
-            <img id="img">
-        </div>
-        <div class="ash">
-            <img src="imagens/ash.webp" alt="Ash pokemon">
-        </div>
+            <div class="misty">
+                <img src="imagens/misty.webp" alt="Misty pokemon">
+            </div>
+            <div class="carcaca">
+                <div class="lente2"></div>
+                <div class="lente"></div>
+                <div class="tela">
+                    <img id="img">
+                </div>
+                <div class="botoes">
+                    <input id="pokemon" placeholder="Nº OU NOME DO POKÉMON"><br>
+                    <button id="numero"> Buscar Pokémon! </button> <br>
+                </div>
+            </div>
+            <div class="ash">
+                <img src="imagens/ash.webp" alt="Ash pokemon">
+            </div>
         </div>
     </main>
 
 
     <script>
-        const pokemon = document.getElementById("pokemon");
-        const numero = document.getElementById("numero");
-        const nome = document.getElementById("nome");
-        const img = document.getElementById("img");
+        var pokemon = document.getElementById("pokemon");
+        var numero = document.getElementById("numero");
+        var img = document.getElementById("img");
 
         function gerarPokemon() {
-            const url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.value
+            var url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.value
             fetch(url)
                 .then(response => response.json())
                 .then((dados) => {
 
-                    nome.value = dados.name
                     img.src = dados.sprites.other.showdown.front_default
                     img.style.height = "200px"
                     img.style.width = "200px"
