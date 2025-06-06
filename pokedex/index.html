@@ -12,18 +12,19 @@
 <body>
 
     <main>
-        <div class="conteiner">
-            <input id="pk">
+        <div class="pokedex">
+
+            <input id="pokemon" placeholder="Digite o número do Pokémon">
             <button id="numero"> Buscar Pokemon </button> <br>
-            <input type="text" id="nome"><br>
-            <img src="" id="img" alt="">
+            <input type="text" id="nome" class="nome"><br>
+            <img id="img">
         </div>
 
     </main>
 
 
     <script>
-        const input = document.getElementById("pk");
+        const input = document.getElementById("pokemon");
         const numero = document.getElementById("numero");
         const nome = document.getElementById("nome");
         const img = document.getElementById("img");
@@ -35,7 +36,7 @@
                 .then((dados) => {
 
                     nome.value = dados.name
-                    img.src = dados.sprites.other.showdown.front_default
+                    img.src = dados.sprites.front_default
                     img.style.height = "200px"
                     img.style.width = "200px"
                 })

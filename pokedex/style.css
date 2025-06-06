@@ -1,0 +1,15 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.pokedex{
+    margin: 0 auto;
+    border: 1px solid red;
+    width: 30%;
+    height: 20%;
+}
+.nome{
+    border: none;
+}
