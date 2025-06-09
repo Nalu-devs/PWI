@@ -20,10 +20,11 @@
                 <img src="imagens/misty.webp" alt="Misty pokemon">
             </div>
             <div class="carcaca">
-                <div class="lente2"></div>
-                <div class="lente"></div>
                 <div class="tela">
+                    <input id="nome" class="nome" type="text">
                     <img id="img">
+                    <input id="numeroPokemon" class="numeroPokemon" type="text">
+                    <input id="tipo" class="tipoPokemon" type="text">
                 </div>
                 <div class="botoes">
                     <input id="pokemon" placeholder="Nº OU NOME DO POKÉMON"><br>
@@ -38,24 +39,50 @@
 
 
     <script>
-        var pokemon = document.getElementById("pokemon");
-        var numero = document.getElementById("numero");
-        var img = document.getElementById("img");
+        var nome = document.getElementById(("nome"))
+        var numeroPokemon = document.getElementById("numeroPokemon")
+        var img = document.getElementById("img")
+        var tipo = document.getElementById("tipo")
+
+        var pokemon = document.getElementById("pokemon")
+        var numero = document.getElementById("numero")
 
         function gerarPokemon() {
             var url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.value
             fetch(url)
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) { //analisa se o nome ou id existe
+                        throw new Error('Pokémon não encontrado!');//caso n exista
+                    }
+                    return response.json();//retorna a funcao
+                })
                 .then((dados) => {
 
-                    img.src = dados.sprites.other.showdown.front_default
-                    img.style.height = "200px"
-                    img.style.width = "200px"
+                    tipo.value = dados.types[0].type.name//como tipos é um vetor precisamos declarar qual indice queremos
+                    nome.value = dados.name
+                    numeroPokemon.value = dados.id
+                    img.src = dados.sprites.other.dream_world.front_default
+                    img.style.height = "182px"
+                    img.style.width = "206px"
+
                 })
+                .catch(error => {//caso der erro (pokemon não encontrado etc)
+                    tipo.value = "";
+                    nome.value = "Não encontrado!";
+                    numeroPokemon.value = ""; //limpa campo
+                    img.src = "";
+                    img.style.height = "";
+                    img.style.width = "";
+                });
+
         }
+        numero.addEventListener("click", gerarPokemon);//quando o botao for clicado
 
-
-        numero.addEventListener("click", gerarPokemon)
+        pokemon.addEventListener("keypress", function (event) {//adiciona no input caso o enter seja apertado
+            if (event.keyCode === 13) {//13 é o codigo da tecla enter
+                gerarPokemon();
+            }
+        });
 
     </script>
 </body>
