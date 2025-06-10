@@ -34,6 +34,25 @@ html {
     align-items: center;
 }
 
+.nome {
+    display: block;
+    width: 95%;
+    border: 1px solid red;
+}
+
+.numeroPokemon {
+    display: block;
+    width: 95%;
+    border: 1px solid yellow;
+}
+
+.tipoPokemon {
+    display: block;
+    width: 95%;
+    border: 1px solid blue;
+}
+
+
 .tela {
     background-color: #fff;
     height: 50%;
