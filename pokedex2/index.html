@@ -30,13 +30,19 @@
                     <div class="circuloGreen"></div>
                 </div>
                 <div class="tela">
-                    <input id="nome" class="nome" type="text">
+                    <input id="nome" class="nome" type="text" disabled>
                     <img id="img" class="imagemPokemon">
-                    <input id="numeroPokemon" class="numeroPokemon" type="text">
-                    <input id="tipo1" class="tipoPokemon" type="text">
-                    <input id="tipo2" class="tipoPokemon" type="text">
-                    <input id="altura" class="alturaPokemon" type="text">
-                    <input id="peso" class="pesoPokemon" type="text">
+                    <input id="tipo1" class="tipoPokemon1" type="text" disabled>
+                    <input id="tipo2" class="tipoPokemon2" type="text" disabled>
+                    <input id="altura" class="alturaPokemon" type="text" disabled>
+                    <input id="peso" class="pesoPokemon" type="text" disabled>
+                    <div class="propriedades">
+                        <input id="numeroPokemon" class="numeroPokemon" type="text" disabled>
+                        <input id="ataque" class="ataquePokemon" type="text" disabled>
+                        <input id="defesa" class="defesaPokemon" type="text" disabled>
+                        <input id="velocidade" class="velocidadePokemon" type="text" disabled>
+                        <input id="ataqueEspecial" class="ataqueEspecialPokemon" type="text" disabled>
+                    </div>
                 </div>
             </div>
             <div class="carcacaBotao">
@@ -60,6 +66,10 @@
         var tipo2 = document.getElementById("tipo2")
         var altura = document.getElementById("altura")
         var peso = document.getElementById("peso")
+        var ataque = document.getElementById("ataque")
+        var defesa = document.getElementById("defesa")
+        var velocidade = document.getElementById("velocidade")
+        var ataqueEspecial = document.getElementById("ataqueEspecial")
 
         var pokemon = document.getElementById("pokemon")
         var numero = document.getElementById("numero")
@@ -76,14 +86,18 @@
                 .then((dados) => {
 
                     tipo1.value = "Tipo: " + dados.types[0].type.name//como tipos é um vetor precisamos declarar qual indice queremos
-                    tipo2.value = "Tipo 2: " + dados.types[1] ? dados.types[1].type.name : "Nenhum"
+                    tipo2.value = "Tipo 2: " + (dados.types[1] ? dados.types[1].type.name : "Não possui")
                     nome.value = dados.name
-                    numeroPokemon.value = "Número: " + dados.id
-                    img.src = dados.sprites.other.dream_world.front_default
-                    img.style.height = "182px"
-                    img.style.width = "206px"
+                    numeroPokemon.value = "Nº: " + dados.id
+                    img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
+                    img.style.height = "141px"
+                    img.style.width = "153px"
                     altura.value = "Altura: " + dados.height
-                    peso.value = "peso: " + dados.weight
+                    peso.value = "Peso: " + dados.weight
+                    ataque.value = "Ataque: " + dados.stats[1].base_stat
+                    defesa.value = "Defesa: " + dados.stats[2].base_stat
+                    velocidade.value = "Velocidade: " + dados.stats[5].base_stat
+                    ataqueEspecial.value = "Especial: " + dados.moves[0].move.name
 
                 })
                 .catch(error => {//caso der erro (pokemon não encontrado etc)
@@ -95,6 +109,10 @@
                     img.style.width = ""
                     altura.value = ""
                     peso.value = ""
+                    ataque.value = ""
+                    defesa.value = ""
+                    velocidade.value = ""
+                    ataqueEspecial.value = ""
                 });
         }
         numero.addEventListener("click", gerarPokemon);//quando o botao for clicado

@@ -5,9 +5,7 @@ html {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-image: url(imagens/fundo-pokedex.avif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(0, 0, 0);
 }
 
 .carcaca {
@@ -21,6 +19,8 @@ html {
     background-color: #f93333;
     position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -32,6 +32,8 @@ html {
     background-color: #f93333;
     border-radius: 0px 20px 20px 0px;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .botoes {
@@ -40,7 +42,10 @@ html {
     max-width: 100%;
     margin-top: 10%;
     border-radius: 10px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .circulo1 {
@@ -49,7 +54,7 @@ html {
     height: 80px;
     background-image: linear-gradient(to top, rgb(109, 198, 250), rgb(209, 252, 255));
     border-radius: 50%;
-    box-shadow:2px 2px 3px black;
+    box-shadow: 2px 2px 3px black;
     position: absolute;
     top: 15px;
     left: 15px;
@@ -75,42 +80,161 @@ html {
 .circuloRed,
 .circuloYellow,
 .circuloGreen {
-  position: absolute;
-  top: 40px; /* Alinha verticalmente com o meio do círculo1 ou onde preferir */
-  width: 15px;
-  height: 15px;
-  border: 1px solid black;
-  border-radius: 50%;
-  z-index: 3;
+    position: absolute;
+    top: 40px;
+    /* Alinha verticalmente com o meio do círculo1 ou onde preferir */
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 3;
 }
 
 .circuloRed {
-  background-color: red;
-  left: 110px; /* distância à direita do circulo1 */
+    background-color: red;
+    left: 110px;
+    /* distância à direita do circulo1 */
 }
 
 .circuloYellow {
-  background-color: yellow;
-  left: 140px; /* 20px à direita do vermelho */
+    background-color: yellow;
+    left: 140px;
+    /* 20px à direita do vermelho */
 }
 
 .circuloGreen {
-  background-color: green;
-  left: 170px; /* 20px à direita do amarelo */
+    background-color: green;
+    left: 170px;
+    /* 20px à direita do amarelo */
+}
+
+.nome,
+.tipoPokemon1,
+.tipoPokemon2,
+.alturaPokemon,
+.pesoPokemon {
+    display: block;
+    width: 50%;
+    max-width: 100%;
+    border: none;
+    position: absolute;
 }
 
 .nome,
 .numeroPokemon,
-.tipoPokemon {
-    display: block;
-    width: 95%;
-    max-width: 100%;
+.tipoPokemon1,
+.tipoPokemon2,
+.alturaPokemon,
+.pesoPokemon,
+.ataquePokemon,
+.defesaPokemon,
+.velocidadePokemon,
+.ataqueEspecialPokemon:disabled {
+    color: black;
+}
+
+.ataquePokemon,
+.numeroPokemon,
+.defesaPokemon,
+.velocidadePokemon,
+.ataqueEspecialPokemon {
+    position: static;
+    /* Remove o posicionamento absoluto */
+    width: 100%;
     border: none;
-    text-align: center;
+    background: transparent;
+}
+
+
+.ataquePokemon {
+    top: 250px;
+    left: 10px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.defesaPokemon {
+    top: 270px;
+    left: 10px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.velocidadePokemon {
+    top: 290px;
+    left: 10px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.ataqueEspecialPokemon {
+    top: 310px;
+    left: 10px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.propriedades {
+    border: 1px solid;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 50%;
+    padding: 5px;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+}
+
+.alturaPokemon {
+    top: 210px;
+    right: 10px;
+    width: 35%;
+    text-align: left;
+}
+
+.pesoPokemon {
+    top: 230px;
+    right: 10px;
+    width: 35%;
+    text-align: left;
+}
+
+.tipoPokemon1 {
+    top: 170px;
+    right: 10px;
+    text-align: left;
+    width: 35%;
+}
+
+.tipoPokemon2 {
+    top: 190px;
+    right: 10px;
+    text-align: left;
+    width: 35%;
+}
+
+.nome {
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    width: 40%;
+}
+
+.numeroPokemon {
+    top: 160px;
+    left: 10px;
+    text-align: left;
+    font-size: 20px;
+    width: 90%;
 }
 
 .imagemPokemon {
-    border: 1px solid blue;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .tela {
@@ -119,7 +243,6 @@ html {
     padding: 30px;
     width: 70%;
     max-width: 100%;
-    margin-top: 30%;
     border: 2px solid #1b2e29;
     box-shadow: inset 4px 0 3px #665c5a, inset -4px 0 3px #665c5a, inset 0 -4px 4px #665c5a;
     display: flex;
@@ -130,11 +253,10 @@ html {
     /* Centraliza os itens verticalmente */
     align-items: center;
     border-radius: 20px 20px 20px 0px;
+    position: relative;
 }
 
 #pokemon {
-    margin: 0 auto;
-    margin-top: 40%;
     margin-bottom: 2%;
     width: 98%;
     max-width: 100%;
@@ -155,7 +277,6 @@ html {
 
 button {
     display: block;
-    margin-left: 5%;
     height: 30%;
     width: 90%;
     max-width: 100%;
@@ -170,11 +291,11 @@ button {
     width: 50%;
     max-width: 100%;
     height: auto;
-    border: 1px solid;
+    border: 1px solid blue;
 }
 
 .ash img {
-    border: 1px solid;
+    border: 1px solid blue;
     width: 90%;
     max-width: 100%;
     height: auto;
@@ -189,5 +310,5 @@ button {
     padding: 0;
     justify-content: center;
     align-items: flex-end;
-    margin-top:2% ;
+    margin-top: 2%;
 }
