@@ -237,6 +237,17 @@ html {
     left: 10px;
 }
 
+.iconPokemon{
+    border: 1px solid blue;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
 .tela {
     background-color: #fff;
     height: 50%;

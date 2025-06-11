@@ -32,6 +32,7 @@
                 <div class="tela">
                     <input id="nome" class="nome" type="text" disabled>
                     <img id="img" class="imagemPokemon">
+                    <img id="icon" class="iconPokemon">
                     <input id="tipo1" class="tipoPokemon1" type="text" disabled>
                     <input id="tipo2" class="tipoPokemon2" type="text" disabled>
                     <input id="altura" class="alturaPokemon" type="text" disabled>
@@ -70,6 +71,7 @@
         var defesa = document.getElementById("defesa")
         var velocidade = document.getElementById("velocidade")
         var ataqueEspecial = document.getElementById("ataqueEspecial")
+        var icon = document.getElementById("icon")
 
         var pokemon = document.getElementById("pokemon")
         var numero = document.getElementById("numero")
@@ -92,8 +94,11 @@
                     img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
                     img.style.height = "141px"
                     img.style.width = "153px"
-                    altura.value = "Altura: " + dados.height
-                    peso.value = "Peso: " + dados.weight
+                    icon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png";
+                    icon.style.height = "120px"
+                    icon.style.width = "108px"
+                    altura.value = "Altura: 0," + dados.height + " Metros"
+                    peso.value = "Peso: 0," + dados.weight + " Kg"
                     ataque.value = "Ataque: " + dados.stats[1].base_stat
                     defesa.value = "Defesa: " + dados.stats[2].base_stat
                     velocidade.value = "Velocidade: " + dados.stats[5].base_stat
