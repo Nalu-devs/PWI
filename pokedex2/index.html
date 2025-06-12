@@ -29,15 +29,17 @@
                     <div class="circuloYellow"></div>
                     <div class="circuloGreen"></div>
                 </div>
-                <div class="tela">
+                <div id="tela" class="tela">
                     <input id="nome" class="nome" type="text" disabled>
-                    <img id="img" class="imagemPokemon">
-                    <img id="icon" class="iconPokemon">
+                    <div class="imagens">
+                        <img id="img" class="imagemPokemon">
+                        <img id="icon" class="iconPokemon"><p>Icon</p>
+                    </div>
                     <input id="tipo1" class="tipoPokemon1" type="text" disabled>
                     <input id="tipo2" class="tipoPokemon2" type="text" disabled>
                     <input id="altura" class="alturaPokemon" type="text" disabled>
                     <input id="peso" class="pesoPokemon" type="text" disabled>
-                    <div class="propriedades">
+                    <div id="propriedades" class="propriedades">
                         <input id="numeroPokemon" class="numeroPokemon" type="text" disabled>
                         <input id="ataque" class="ataquePokemon" type="text" disabled>
                         <input id="defesa" class="defesaPokemon" type="text" disabled>
@@ -72,6 +74,8 @@
         var velocidade = document.getElementById("velocidade")
         var ataqueEspecial = document.getElementById("ataqueEspecial")
         var icon = document.getElementById("icon")
+        var propriedades = document.getElementById("propriedades")
+        var tela = document.getElementById("tela")
 
         var pokemon = document.getElementById("pokemon")
         var numero = document.getElementById("numero")
@@ -91,19 +95,32 @@
                     tipo2.value = "Tipo 2: " + (dados.types[1] ? dados.types[1].type.name : "Não possui")
                     nome.value = dados.name
                     numeroPokemon.value = "Nº: " + dados.id
-                    img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
+                    img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
                     img.style.height = "141px"
                     img.style.width = "153px"
                     icon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png";
-                    icon.style.height = "120px"
-                    icon.style.width = "108px"
-                    altura.value = "Altura: 0," + dados.height + " Metros"
-                    peso.value = "Peso: 0," + dados.weight + " Kg"
+                    altura.value = "Altura: " + dados.height
+                    peso.value = "Peso: " + dados.weight
                     ataque.value = "Ataque: " + dados.stats[1].base_stat
                     defesa.value = "Defesa: " + dados.stats[2].base_stat
                     velocidade.value = "Velocidade: " + dados.stats[5].base_stat
                     ataqueEspecial.value = "Especial: " + dados.moves[0].move.name
 
+                    if (propriedades.style.border = "none") {
+                        propriedades.style.border = "1px solid"
+                    }
+                    else {
+                        propriedades.style.border = "none"
+                    }
+
+                    if (tela.style.height = "50%") {
+                        tela.style.height = "60%"
+                        tela.style.top = "5%"
+                    }
+                    else {
+                        tela.style.height = "60%"
+                        tela.style.top = ""
+                    }
                 })
                 .catch(error => {//caso der erro (pokemon não encontrado etc)
                     tipo1.value = ""
@@ -127,7 +144,7 @@
                 gerarPokemon();
             }
         });
-            //https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/versions/generation-viii/icons  link de icons
+        //https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/versions/generation-viii/icons  link de icons
     </script>
 </body>
 

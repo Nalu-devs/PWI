@@ -5,11 +5,10 @@ html {
     height: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: #e5e5b8;
 }
 
 .carcaca {
-    margin-right: 0%;
     width: 40%;
     height: 90vh;
     max-width: 100%;
@@ -27,11 +26,31 @@ html {
     width: 43%;
     height: 70vh;
     max-width: 100%;
+    border-left: 4px solid rgb(124, 6, 6);
     background-color: #f93333;
     border-radius: 0px 20px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    clip-path: polygon(0 0,
+            /* topo esquerdo */
+            38% 0,
+            /* topo antes do arco */
+            42% 4%,
+            /* curva topo */
+            48% 10%,
+            /* curva */
+            52% 14%,
+            /* curva */
+            100% 14%,
+            /* topo direito antes do recuo */
+            100% 100%,
+            /* canto inferior direito */
+            20% 100%,
+            /* canto inferior esquerdo */
+            0 100%
+            /* canto inferior esquerdo */
+        );
 }
 
 .botoes {
@@ -173,7 +192,6 @@ html {
 }
 
 .propriedades {
-    border: 1px solid;
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -216,9 +234,12 @@ html {
 
 .nome {
     top: 10px;
-    right: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 20px;
     width: 40%;
+    max-width: 100%;
+    text-align: center;
 }
 
 .numeroPokemon {
@@ -229,20 +250,23 @@ html {
     width: 90%;
 }
 
+
+
 .imagemPokemon {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 10px;
 }
 
-.iconPokemon{
+.iconPokemon {
     position: absolute;
     top: 40px;
     right: 50px;
     align-items: center;
     justify-content: center;
     display: flex;
-    
+    width: 98px;
+    height: 86px;
 }
 
 .tela {
