@@ -258,7 +258,7 @@ html {
     left: 10px;
 }
 
-.iconPokemon {
+.iconPokemon{
     position: absolute;
     top: 40px;
     right: 50px;
@@ -267,6 +267,12 @@ html {
     display: flex;
     width: 98px;
     height: 86px;
+}
+
+p{
+    position: absolute;
+    top: 110px;
+    right: 85px;
 }
 
 .tela {
