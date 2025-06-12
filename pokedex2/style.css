@@ -19,14 +19,16 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border: 3px solid #941515;
 }
 
 .carcacaBotao {
     width: 43%;
     height: 70vh;
     max-width: 100%;
-    border-left: 4px solid rgb(124, 6, 6);
+    border-left: 3px solid #941515;
+    border-bottom: 3px solid #941515;
+    border-right: 3px solid #941515;
     background-color: #f93333;
     border-radius: 0px 20px 20px 0px;
     display: flex;
