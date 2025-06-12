@@ -34,6 +34,7 @@
                     <div class="imagens">
                         <img id="img" class="imagemPokemon">
                         <img id="icon" class="iconPokemon"><p>Icon</p>
+                        <audio id="audio"></audio>
                     </div>
                     <input id="tipo1" class="tipoPokemon1" type="text" disabled>
                     <input id="tipo2" class="tipoPokemon2" type="text" disabled>
@@ -76,6 +77,7 @@
         var icon = document.getElementById("icon")
         var propriedades = document.getElementById("propriedades")
         var tela = document.getElementById("tela")
+        var audio = document.getElementById("audio")
 
         var pokemon = document.getElementById("pokemon")
         var numero = document.getElementById("numero")
@@ -99,12 +101,14 @@
                     img.style.height = "141px"
                     img.style.width = "153px"
                     icon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png";
-                    altura.value = "Altura: " + dados.height
-                    peso.value = "Peso: " + dados.weight
+                    altura.value = "Altura: 0," + dados.height + "Metros"
+                    peso.value = "Peso: 0," + dados.weight + "Quilos"
                     ataque.value = "Ataque: " + dados.stats[1].base_stat
                     defesa.value = "Defesa: " + dados.stats[2].base_stat
                     velocidade.value = "Velocidade: " + dados.stats[5].base_stat
                     ataqueEspecial.value = "Especial: " + dados.moves[0].move.name
+                    audio.src = dados.cries.latest
+                    audio.play()
 
                     if (propriedades.style.border = "none") {
                         propriedades.style.border = "1px solid"
@@ -144,7 +148,7 @@
                 gerarPokemon();
             }
         });
-        //https://github.com/PokeAPI/sprites/tree/master/sprites/pokemon/versions/generation-viii/icons  link de icons
+        //other.versions.generation-i.red-blue.front-default
     </script>
 </body>
 
