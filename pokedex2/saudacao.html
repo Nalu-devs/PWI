@@ -13,11 +13,52 @@
     <img src="imagens/carvalho.png">
     <div class="circulo"></div>
 
-    <div class="caixaTexto">
-        <p>Olá! Seja bem vindo a procura de pokémons.<br/>
-        Clique em continuar para pesquisar seu pokemon favorito!</p>
-        <button class="continuar"><a href="index.html">Continuar</a></button>
+    <div class="saudacao" id="saudacao">
+        <div id="mensagem" class="mensagem">.<br /></div>
+        <button id="proximo">Continuar</button>
     </div>
+
+    <!-- <script>
+        var saudacao = document.getElementById("saudacao");
+        var mensagem = document.getElementById("mensagem");
+        var proximo = document.getElementById("proximo");
+
+        var mensagens = [
+            "Olá, seja bem-vindo à busca de Pokémons! Indicaremos caracteristicas de pokemons e alguns sons marcantes",
+            "Clique em continuar para pesquisar seu Pokémon favorito!"
+        ];
+
+        var etapa = 0;
+
+        function digitarTexto(texto, elemento, velocidade = 40) {
+            var i = 0;
+            elemento.textContent = "";
+
+            function escrever() {
+                if (i < texto.length) {
+                    elemento.textContent += texto.charAt(i);
+                    i++;
+                    setTimeout(escrever, velocidade);
+                }
+            }
+
+            escrever();
+        }
+
+        proximo.addEventListener("click", () => {
+            etapa++;
+
+            if (etapa < mensagens.length) {
+                digitarTexto(mensagens[etapa], mensagem);
+            } else {
+                saudacao.style.display = "none"; // Esconde a saudação
+            }
+        });
+
+        // Iniciar com a primeira mensagem
+        digitarTexto(mensagens[0], mensagem);
+    </script> -->
+
 </body>
 
 </html>
