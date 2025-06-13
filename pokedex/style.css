@@ -7,7 +7,6 @@ html {
     align-items: center;
     background-color: #e5c1b8;
 }
-
 .carcaca {
     width: 50%;
     height: 98vh;
@@ -24,35 +23,30 @@ html {
 
 .carcacaBotaoControle {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 10%;
+    height: 10%;
 }
 
-.carcacaBotaoControle .vertical{
-/* .carcacaBotaoControle .horizontal { */
+.carcacaBotaoControle .cimaBaixo{
     position: absolute;
     background-color: #1b1b1b;
-    /* tom escuro da cruz */
     border-radius: 8px;
-}
-
-.carcacaBotaoControle .vertical {
     width: 30px;
     height: 100px;
     left: 35px;
-    top: 0;
+    top: 100%;
     display: flex;
     flex-direction: column;
 }
 
-/* .carcacaBotaoControle .horizontal {
+.carcacaBotaoControle .esquerdaDireita {
     width: 100px;
     height: 30px;
     top: 35px;
     left: 0;
     display: flex;
     flex-direction: row;
-} */
+}
 
 .carcacaBotao {
     width: 43%;
@@ -257,6 +251,7 @@ html {
     position: absolute;
     bottom: 5px;
     left: 70%;
+    
 }
 
 .propriedades {
