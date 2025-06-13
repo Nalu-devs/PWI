@@ -56,7 +56,7 @@ html {
 
 .carcacaBotao {
     width: 43%;
-    height: 70vh;
+    height: 80vh;
     max-width: 100%;
     border-left: 3px solid #941515;
     border-bottom: 3px solid #941515;
@@ -436,7 +436,7 @@ button {
 }
 
 .misty img {
-    margin-left: 10%;
+    margin-left: 30%;
     width: 50%;
     max-width: 100%;
     height: auto;
