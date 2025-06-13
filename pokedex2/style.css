@@ -41,6 +41,9 @@ html {
     height: 100px;
     left: 35px;
     top: 0;
+    border: 1px solid rgb(0, 247, 255);
+    display: flex;
+    flex-direction: column;
 }
 
 .cross-button .horizontal {
@@ -48,6 +51,9 @@ html {
     height: 30px;
     top: 35px;
     left: 0;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: row;
 }
 
 .carcacaBotao {
@@ -278,7 +284,7 @@ html {
     width: 35%;
     text-align: left;
     font-size: 14px;
-    
+
 }
 
 .pesoPokemon {
@@ -324,7 +330,50 @@ html {
     text-align: center;
 }
 
+.triangulo {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 10px solid #5a5a5a;
+    cursor: pointer;
+    margin-left: 60%;
+    margin-top: 10px;
+}
 
+.triangulo2 {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #3d3d3d;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.trianguloAlto {
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #3d3d3d;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.trianguloBaixo {
+    width: 0;
+    height: 0;
+    border-top: 10px solid #3d3d3d;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    cursor: pointer;
+    margin-top: 60px;
+    margin-left: 10px;
+}
 
 .imagemPokemon {
     position: absolute;
