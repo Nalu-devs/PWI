@@ -22,21 +22,21 @@ html {
     border: 3px solid #941515;
 }
 
-.cross-button {
+.carcacaBotaoControle {
     position: relative;
     width: 100px;
     height: 100px;
 }
 
-.cross-button .vertical,
-.cross-button .horizontal {
+.carcacaBotaoControle .vertical,
+.carcacaBotaoControle .horizontal {
     position: absolute;
     background-color: #1b1b1b;
     /* tom escuro da cruz */
     border-radius: 8px;
 }
 
-.cross-button .vertical {
+.carcacaBotaoControle .vertical {
     width: 30px;
     height: 100px;
     left: 35px;
@@ -46,7 +46,7 @@ html {
     flex-direction: column;
 }
 
-.cross-button .horizontal {
+.carcacaBotaoControle .horizontal {
     width: 100px;
     height: 30px;
     top: 35px;
