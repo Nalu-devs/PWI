@@ -28,8 +28,8 @@ html {
     height: 100px;
 }
 
-.carcacaBotaoControle .vertical,
-.carcacaBotaoControle .horizontal {
+.carcacaBotaoControle .vertical{
+/* .carcacaBotaoControle .horizontal { */
     position: absolute;
     background-color: #1b1b1b;
     /* tom escuro da cruz */
@@ -45,14 +45,14 @@ html {
     flex-direction: column;
 }
 
-.carcacaBotaoControle .horizontal {
+/* .carcacaBotaoControle .horizontal {
     width: 100px;
     height: 30px;
     top: 35px;
     left: 0;
     display: flex;
     flex-direction: row;
-}
+} */
 
 .carcacaBotao {
     width: 43%;
@@ -416,6 +416,7 @@ html {
     box-shadow: inset 0 0 10px black;
     display: block;
     color: #fff;
+    outline: none;
 }
 
 #pokemon::placeholder {

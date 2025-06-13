@@ -50,10 +50,14 @@
                 </div>
                 <div class="botoesDirecionais">
                     <div class="carcacaBotaoControle">
-                        <div class="vertical"><a href="index.html" class="trianguloAlto"></a><a href="index.html"
-                                class="trianguloBaixo"></a></div>
-                        <div class="horizontal"><a href="index.html" class="triangulo2"></a><a href="index.html"
-                                class="triangulo"></a></div>
+                        <div class="vertical">
+                            <div class="trianguloAlto"></div>
+                            <div class="trianguloBaixo"></div>
+                        </div>
+                        <div class="horizontal" >
+                            <button id="ir" onclick= "mudarPokemon()">ir</button>
+                            <button id="voltar">voltar</button>
+                        </div>
                     </div>
                 </div>
                 <div class="telaVerde">
@@ -93,8 +97,13 @@
         var tela = document.getElementById("tela")
         var audio = document.getElementById("audio")
 
+        var ir = document.getElementById("ir")
+        var voltar = document.getElementById("voltar")
+
         var pokemon = document.getElementById("pokemon")
         var numero = document.getElementById("numero")
+
+        var numeroInicial = 1
 
         function gerarPokemon() {
             var url = "https://pokeapi.co/api/v2/pokemon/" + pokemon.value
@@ -142,8 +151,9 @@
                 })
                 .catch(error => {//caso der erro (pokemon não encontrado etc)
                     tipo1.value = ""
+                    tipo2.value = ""
                     nome.value = "Não encontrado!"
-                    numeroPokemon.value = "" //limpa campo
+                    numeroPokemon.value = ""
                     img.src = ""
                     img.style.height = ""
                     img.style.width = ""
@@ -153,15 +163,33 @@
                     defesa.value = ""
                     velocidade.value = ""
                     ataqueEspecial.value = ""
-                });
+                })
         }
-        numero.addEventListener("click", gerarPokemon);//quando o botao for clicado
+        numero.addEventListener("click", gerarPokemon)//quando o botao for clicado
 
         pokemon.addEventListener("keypress", function (event) {//adiciona no input caso o enter seja apertado
             if (event.keyCode === 13) {//13 é o codigo da tecla enter
-                gerarPokemon();
+                gerarPokemon()
             }
-        });
+        })
+
+        function mudarPokemon(ir){
+            alert("Funcionou")
+        }
+
+        // ir.addEventListener("click", () => {
+        //     numeroInicial += 1
+        //     img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
+        //     img.style.height = "141px"
+        //     img.style.width = "153px"
+        //     icon.src = dados.sprites.front_default ? dados.sprites.front_default : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png"
+
+        // })
+
+        // voltar.addEventListener("click", () => {
+        //     alert("Funciona o voltar")
+        // })
+
     </script>
 </body>
 
