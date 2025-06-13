@@ -334,10 +334,8 @@ html {
 
 .iconPokemon {
     width: 96px;
-    height: 96px;
     margin-bottom: 3px;
-    border: 1px solid;
-
+    border: none;
 }
 
 .tela {
