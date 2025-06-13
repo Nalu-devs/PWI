@@ -33,7 +33,6 @@
                     <input id="nome" class="nome" type="text" disabled>
                     <div class="imagens">
                         <img id="img" class="imagemPokemon">
-                        <img id="icon" class="iconPokemon"><p>Icon</p>
                         <audio id="audio"></audio>
                     </div>
                     <input id="tipo1" class="tipoPokemon1" type="text" disabled>
@@ -48,6 +47,18 @@
                         <input id="ataqueEspecial" class="ataqueEspecialPokemon" type="text" disabled>
                     </div>
                 </div>
+                <div class="botoesDirecionais">
+                    <div class="cross-button">
+                        <div class="vertical"></div>
+                        <div class="horizontal"></div>
+                    </div>
+                </div>
+                <div class="telaVerde">
+                    <div class="conteudoTelaVerde">
+                        <img id="icon" class="iconPokemon">
+                    </div>
+                </div>
+
             </div>
             <div class="carcacaBotao">
                 <div class="botoes">
@@ -100,7 +111,7 @@
                     img.src = dados.sprites.other.dream_world.front_default ? dados.sprites.other.dream_world.front_default : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + dados.id + ".png"
                     img.style.height = "141px"
                     img.style.width = "153px"
-                    icon.src = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png";
+                    icon.src = dados.sprites.front_default ? dados.sprites.front_default:"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/" + dados.id + ".png"
                     altura.value = "Altura: 0," + dados.height + "Metros"
                     peso.value = "Peso: 0," + dados.weight + "Quilos"
                     ataque.value = "Ataque: " + dados.stats[1].base_stat
@@ -117,14 +128,14 @@
                         propriedades.style.border = "none"
                     }
 
-                    if (tela.style.height = "50%") {
-                        tela.style.height = "60%"
-                        tela.style.top = "5%"
-                    }
-                    else {
-                        tela.style.height = "60%"
-                        tela.style.top = ""
-                    }
+                    // if (tela.style.height = "50%") {
+                    //     tela.style.height = "57%"
+                    //     tela.style.top = "1%"
+                    // }
+                    // else {
+                    //     tela.style.height = "60%"
+                    //     tela.style.top = ""
+                    // } iria expandir a tela, mas desisti
                 })
                 .catch(error => {//caso der erro (pokemon não encontrado etc)
                     tipo1.value = ""
